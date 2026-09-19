@@ -1,67 +1,52 @@
-<div align="center">
+# ARK-tube/.github
 
-<img src="https://raw.githubusercontent.com/ARK-tube/ARKtube/main/arktube_linux/resources/icons/appIcon.png" alt="ARKtube" width="296" height="296">
+Organization-level repository for **ARK-tube**. It holds the org profile page and, optionally,
+default community health files shared by every repository in the org.
 
-# ARKtube
+This repository contains no application code. The app lives in
+[ARK-tube/ARKtube](https://github.com/ARK-tube/ARKtube).
 
-**YouTube, as a native desktop app.**
-
-Keep the UI. Keep the player. Change the shell.
-
-</div>
-
----
-
-## What we build
-
-ARKtube wraps YouTube's own TV (Leanback) interface in a thin native shell, so it
-behaves like an installed application instead of a browser tab. No redesign, no
-replacement frontend, no bundled copy of the site. YouTube stays YouTube; we only
-own the window around it.
+## What's here
 
 ```text
-YouTube (youtube.com/tv)  +  GTK3 + WebKit2GTK  =  YouTube, installed.
+.github/
+├── README.md            this file (visible only on this repo's page)
+└── profile/
+    └── README.md        rendered on https://github.com/ARK-tube
 ```
 
-## Projects
+### `profile/README.md`: the organization profile
 
-| Project | What it is | Where |
-|---|---|---|
-| **ARKtube for Linux** | Native GTK3 + WebKit2GTK client for `youtube.com/tv`: fullscreen persistence, gamepad and remote input, offline screen, boot splash, `.deb` builds from CI | [`main`](https://github.com/ARK-tube/ARKtube) |
-| **Webtop** | A session layer that makes ARKtube selectable from the Ubuntu login screen, without starting the full GNOME Shell desktop | [`webtop`](https://github.com/ARK-tube/ARKtube/tree/webtop) |
-| **Webtop, Sway edition** | The same idea on Sway: ARKtube is the only window the compositor ever shows, fullscreen and borderless | [`arktube-layer-shell`](https://github.com/ARK-tube/ARKtube/tree/arktube-layer-shell) |
-| **ARKtube for Android** | A WebView shell around YouTube's mobile web UI | [`Android`](https://github.com/ARK-tube/ARKtube/tree/Android) |
+GitHub renders this file at the top of the organization's home page. It works only if:
 
-## Design principles
+- the repository is named exactly `.github`
+- the repository is **public**
+- the file is at exactly `profile/README.md`
 
-- **Add the smallest layer that works.** If YouTube already solves a problem, we let it.
-- **Own the window, not the page.** The native side handles window state, input mapping,
-  and connectivity. The page is never re-implemented.
-- **Stay small until the approach is proven.** Linux first; other platforms only after
-  the Linux design holds up.
+Edit that file to change what visitors see at `github.com/ARK-tube`. This root README is
+**not** shown there.
 
-## Status
+### Default community health files (optional)
 
-Early and in progress. The Linux app runs today; tray integration, Immersive Mode,
-AppImage packaging, and non-Linux builds are not ported yet. The repository's
-[roadmap](https://github.com/ARK-tube/ARKtube#status) tracks what is done and what is open.
+Files placed in this repo are used as fallbacks by any org repository that doesn't have its
+own copy. Supported files include:
 
-## Try it
+| File | Purpose |
+|---|---|
+| `CONTRIBUTING.md` | How to contribute |
+| `CODE_OF_CONDUCT.md` | Community standards |
+| `SECURITY.md` | How to report vulnerabilities |
+| `SUPPORT.md` | Where to get help |
+| `ISSUE_TEMPLATE/` | Default issue forms and templates |
+| `PULL_REQUEST_TEMPLATE.md` | Default pull request template |
 
-```bash
-git clone https://github.com/ARK-tube/ARKtube.git
-cd ARKtube/arktube_linux
-cmake -B build -S . && cmake --build build
-./build/arktube_linux
-```
+They can sit in the repo root, in `docs/`, or in a `.github/` folder. A repository's own
+file always takes precedence over the default from here.
 
-Requires CMake ≥ 3.16, a C11 compiler, `libgtk-3-dev`, and `libwebkit2gtk-4.1-dev`.
-Full instructions are in the [repository README](https://github.com/ARK-tube/ARKtube#install).
+## Related
 
----
+- [ARKtube](https://github.com/ARK-tube/ARKtube): the native GTK3 + WebKit2GTK client for `youtube.com/tv`
 
-<sub>ARKtube is an independent project. It is not affiliated with or endorsed by Google or YouTube.
-YouTube is a trademark of Google LLC.</sub>
 ---
 
 <sub>ARKtube is an independent project. It is not affiliated with or endorsed by Google or YouTube.
