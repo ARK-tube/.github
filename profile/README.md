@@ -1,4 +1,4 @@
-# ARK-tube/.github
+# ARK-tube
 
 Organization-level repository for **ARK-tube**. It holds the org profile page and, optionally,
 default community health files shared by every repository in the org.
